@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>易号通直播管理系统</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="editor/css/wangEditor.min.css">
+        <!--[if lt IE 9]>
+        <script src="js/ie/respond.min.js"></script>
+        <script src="js/ie/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <header id="header" class="navbar"></header>
+        <nav id="nav" class="nav-primary visible-lg"></nav>
+        <!-- / nav -->
+        <section id="content">
+            <section class="main padder">
+                <div class="clearfix">
+                    <h4><i class="icon-comment"></i>消息聊天管理</h4>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                <i class="icon-comments-alt"></i>聊天消息列表
+                            </header>
+                            <div class="row text-small">
+                             <div class="col-lg-1 m-b-mini">
+                                    <input id="chat-username" class="form-control" placeholder="会员帐号"></input>
+                                </div>
+                                <div class="col-lg-1 m-b-mini">
+                                    <input id="chat-nick" class="form-control" placeholder="会员昵称"></input>
+                                </div>
+                                <div class="col-lg-2 m-b-mini">
+                                    <input id="chat-cont" class="form-control" placeholder="内容"></input>
+                                </div>
+                                <div class="col-lg-2 m-b-mini">
+                                    <a id="chat-search" href="#" class="btn btn-info">搜 索</a>
+                                </div>
+                            </div>
+                            <div class="pull-out  m-t-small">
+                                <table class="table table-striped m-b-none text-small">
+                                    <thead>
+                                        <tr>
+                                            <th width="80">序号</th>
+                                            <th width="100">会员编号</th>
+                                            <th width="120">会员帐号</th>
+                                            <th width="120">会员昵称</th>
+                                            <th width="150">发表时间</th>
+                                            <th width="120">发表IP</th>
+                                            <th>聊天内容</th>
+                                            <th width="70">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="chat-list"></tbody>
+                                </table>
+                            </div>
+                            <footer class="panel-footer">
+                                <div class="row">
+                                    <div class="col-lg-4 hidden-sm"></div>
+                                    <div class="col-lg-3 text-center"></div>
+                                    <div class="col-lg-5 text-right text-center-sm">
+                                        <ul class="pagination pagination-small m-t-none m-b-none" id="chat-page"></ul>
+                                    </div>
+                                </div>
+                            </footer>
+                        </section>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </section>
+        </section>
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <div id="plugin"></div>
+        <!-- / footer -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.js"></script>
+        <!-- app -->
+        <script src="js/app.js"></script>
+        <script src="js/app.data.js"></script>
+        <!-- file input -->
+        <script src="js/file-input/bootstrap.file-input.js"></script>
+        <script type="text/javascript" src="editor/js/wangEditor.min.js"></script>
+        <script type="text/javascript" src="js/base.js" ></script>
+        <script src="js/template_html.js" ></script>
+        <script type="text/javascript" src="js/msg.js" ></script>
+        <script>$(document).ready(function(){chat.get()});</script>
+    </body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>易号通直播平台管理系统</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="editor/css/wangEditor.min.css">
+        <style>
+            .container {
+                width: 100%;
+                margin: 0 auto;
+                position: relative;
+            }
+        </style>
+        <!--[if lt IE 9]>
+            <script src="js/ie/respond.min.js"></script>
+            <script src="js/ie/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <header id="header" class="navbar"></header>
+        <nav id="nav" class="nav-primary visible-lg"></nav>
+        <!-- / nav -->
+        <section id="content">
+            <section class="main padder">
+                <div class="clearfix">
+                    <h4><i class="icon-edit"></i>代理信息</h4>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 hidden-sm"></div>
+                    <div class="col-lg-8">
+                        <section class="panel form-horizontal">
+                            <h4><i class="icon-gear"></i><span id="title" ></span></h4>
+                            <div class="line line-dashed m-t-large"></div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">首页LOGO</label>
+                                <div class="col-lg-8">
+                                    <div class="container">
+                                        <div id="editor-logo"  style="height:110px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">咨询热线</label>
+                                <div class="col-lg-5">
+                                    <input type="text" id="cs-phone" placeholder="直播页咨询热线电话" data-required="true" class="form-control parsley-validated">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label" >公众号二维码</label>
+                                <div class="col-lg-8">
+                                    <div class="container">
+                                        <div id="editor-wxpub"  style="height:160px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">联系QQ</label>
+                                <div class="col-lg-8">
+                                    <textarea id="qqs" placeholder="多个QQ 空格 隔开" rows="2" class="form-control parsley-validated"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">分享链接二维码</label>
+                                <div class="col-lg-8">
+                                    <div class="container">
+                                        <div id="editor-share" style="height:160px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">下载页url</label>
+                                <div class="col-lg-8">
+                                    <input type="text" id="download-url" placeholder="下载页url" data-required="true" class="form-control parsley-validated">
+                                </div>
+                            </div>
+                            <div class="form-group" style="display:none">
+                                <label class="col-lg-3 control-label">背景图</label>
+                                <div class="col-lg-8">
+                                    <div class="container">
+                                        <div id="editor-bg" style="height:160px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">帮助中心url</label>
+                                <div class="col-lg-8">
+                                    <input type="text" id="help-url" placeholder="帮助中心url" data-required="true" class="form-control parsley-validated">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">客服支持QQ号</label>
+                                <div class="col-lg-8">
+                                    <input type="text" id="support_qq" placeholder="客服支持QQ号" data-required="true" class="form-control parsley-validated">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">官网首页url</label>
+                                <div class="col-lg-8">
+                                    <input type="text" id="website_url" placeholder="官网首页" data-required="true" class="form-control parsley-validated">
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">体验时间</label>
+                                <div class="col-lg-8">
+                                    <input type="text" id="unreg_watchtime" placeholder="体验时间(小时)" data-required="true" class="form-control parsley-validated">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">弹出注册提示时间</label>
+                                <div class="col-lg-8">
+                                    <input type="text" id="unreg_alerttime" placeholder="弹出注册提示时间(分钟)" data-required="true" class="form-control parsley-validated">
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="form-group">
+                                    <div class="col-lg-11" style="text-align: right;">
+                                        <a href="#" id="update-homepage" class="btn btn-primary">提交修改</a>
+                                    </div>
+                                </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-2 hidden-sm"></div>
+                </div>
+            </section>
+        </section>
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <div id="plugin"></div>n
+        <!-- / footer -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.js"></script>
+        <!-- app -->
+        <script src="js/app.js"></script>
+        <script src="js/app.data.js"></script>
+        <!-- file input -->
+        <script src="js/file-input/bootstrap.file-input.js"></script>
+        <script type="text/javascript" src="editor/js/wangEditor.min.js" ></script>
+        <script type="text/javascript" src="js/base.js" ></script>
+        <script src="js/template_html.js" ></script>
+        <script type="text/javascript" src="js/sys.js" ></script>
+        <script>$(document).ready(function(){util.load(); company.init()});</script>
+    </body>
+
+</html>

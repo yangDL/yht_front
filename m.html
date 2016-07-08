@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta name=viewport content="initial-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="bookmark" href="./favicon.ico" />
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" media="screen" />
+    <link type="text/css" href="scroll/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="css/m.css" />   
+    <title>易号财经直播室</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="logo"><img src="img/logo.png"></div>        
+        <div class="user">
+            <div class="login-btn">
+                <button type="button" class="btn btn-success" id="to-login">登录</button>
+                <button type="button" class="btn btn-default" id="to-register">注册</button>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="bbs-line">
+            <div class="bbs">
+                <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+                <div class="bbs-content">
+                    <marquee></marquee>
+                </div>
+            </div>
+        </div>
+        <div class="lg-play">
+            <!--<p style="color: red; font-size: 16px; font-weight: bolder; padding: 5px 10px 0 10px; display: none;">请前往注册，才可观看直播，继续享受专家点评vip待遇</p>-->
+            <div id="play-box"></div>
+        </div>
+        <div class="play-info">
+            <div class="experience"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>我的等级：0</div>
+            <div class="data-online">在线人数：0</div>
+        </div>
+        <div class="caodan">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#chat" aria-controls="chat" role="tab" data-toggle="tab">聊天</a></li>
+                <li role="presentation"><a href="#crili" aria-controls="crili" role="tab" data-toggle="tab">财经日历</a></li>
+                <li role="presentation"><a href="#cdata" aria-controls="cdata" role="tab" data-toggle="tab">财经数据</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="chat">
+                    <div class="chat-load" style="display: none;">
+                        <img src="img/load.gif">
+                        <p>正在连接聊天室...</p>
+                    </div>
+                    <div class="chat-box">
+                        <div class="chat-msg">
+                            <div class="msg-list">
+                                <div class="other-msg"><div class="msg-user"><img src="http://q.qlogo.cn/qqapp/101321311/21A8D81164B19DD87F18110AC0773A6D/40"><p><span class="chat-time">2016-06-15 15:21:15</span><span class="nickname">轩</span></p></div><div class="msg-box"><div class="msg-arrow"></div><div class="msg">123123</div></div></div>
+                                <div class="self-msg"><div class="msg-user"><img src="http://7xo44t.com1.z0.glb.clouddn.com/958userheadpicufe7h84ll4"><p><span class="chat-time">2016-06-15 16:13:14</span><span class="nickname">yangDL</span></p></div><div class="msg-box"><div class="msg-arrow"></div><div class="msg">haha</div></div></div>
+                                <div class="history-hr">以上最近消息</div>
+                            </div>
+                        </div>
+                        <div class="send-box">
+                            <p id="send-tip"></p>
+                            <div class="face">
+                                <span class="biaoqing"></span>
+                                <span class="clear-msg"></span>
+                                <div class="face-list" style="display: none;"></div>
+                                <div class="history-box">
+                                    <h4>消息记录</h4>
+                                    <div class="history-list"></div>
+                                </div>
+                            </div>
+                            <div class="send-textarea" contenteditable="true"></div>
+                            <a id="send">Enter</a>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="crili">
+                    <div class="iframe">
+                        <iframe frameborder="0" src="http://rili.jin10.com"></iframe>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="cdata">
+                    <div class="iframe">
+                        <iframe frameborder="0" src="http://www.jin10.com"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header1">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <span class="modal-title1"></span>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <span style="float: left; margin: 5px 0 0 5%;" id="qq_login_btn"></span>
+                    <button type="button" class="btn btn-error" data-dismiss="modal" id="cancel-btn">取消</button>
+                    <button type="button" class="btn btn-primary" id="modal-btn">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" id="tip">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">提示</h4>
+                </div>
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+    <div id="login-form" style="display: none;">
+            <div class="alert-box">
+                <form>
+                    <div class="form-group"></div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="loginuser" placeholder="帐号 手机号码/QQ/邮箱">
+                        <span>请输入正确的帐号</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="loginpwd" placeholder="********">
+                        <span>请输入正确的密码</span>
+                    </div>
+                    <div class="form-group"><a href="#" onclick="yihaoT.gen_register();">前往注册</a></div>
+                </form>
+            </div>
+        </div>
+        <div id="register-form" style="display: none;">
+            <div class="alert-box">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" placeholder="帐号 手机号码/QQ/邮箱">
+                        <span>请输入正确的帐号</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="register-qq" placeholder="QQ">
+                        <span>请输入正确的QQ号</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nickname" placeholder="昵称">
+                        <span>请输入正确的昵称</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd" placeholder="密码">
+                        <span>请输入正确的密码</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd2" placeholder="再次确认密码">
+                        <span>两次输入的密码需保持一致</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="telephone" placeholder="手机号码">
+                        <span>请输入正确的手机号码</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="yzm" placeholder="短信验证码">
+                        <button type="button" class="btn btn-info" id="yzm-btn">验证码</button>
+                    </div>
+                    <div class="form-group"><a href="#" onclick="yihaoT.gen_login();">前往登录</a></div>
+                </form>
+            </div>
+        </div>
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101321311" data-redirecturi="http://zhibo.yht134.com/qq_login.html" charset="utf-8"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/swfobject/2.2/swfobject.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/web-socket-js/1.0.0/web_socket.min.js"></script>
+    <script type="text/javascript" src="scroll/script/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="scroll/script/jquery.jscrollpane.min.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="./jwplayer/jwplayer.js"></script>
+    <!--<script src="./jwplayer/provider.streamroot.js"></script>-->
+    <script src="js/m.js?v=1.0.0"></script>
+</body>
+</html>

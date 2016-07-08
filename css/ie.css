@@ -1,0 +1,129 @@
+.browser-outdate {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: 99999;
+    display: block;
+    width: 100%;
+    height: 5040px;
+    background: url(http://pc.pic.uhouzz.com/online/cdn/common/images/bg-black.d73e6b58.png) left top;
+}
+DIV {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+BODY {
+    font-family: Circular, "Helvetica Neue", "Microsoft YaHei", "Helvetica", Arial, sans-serif;
+}
+BODY {
+    border: 0;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    min-width: 1000px;
+    background: #fafafa;
+}
+.browser-outdate .box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 752px;
+    height: 232px;
+    margin: -116px 0 0 -376px;
+    background-color: #fff;
+    color: #666;
+    text-align: left;
+}
+
+.browser-outdate .box .compatibility-layer {
+    width: 750px;
+    height: 230px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+.browser-outdate .box .compatibility-layer H1 {
+    margin: 0 auto;
+    padding-left: 35px;
+    display: inline-block;
+    line-height: 96px;
+    background: url(http://pc.pic.uhouzz.com/online/cdn/common/images/compatibility-layer/i.7edd3212.png) no-repeat 0 center;
+}
+H1 {
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+.browser-outdate .box .compatibility-layer UL {
+    margin: 0 auto;
+    width: 310px;
+    height: 70px;
+}
+.clearfix:after {
+    clear: both;
+    overflow: hidden;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:before {
+    content: "";
+    display: table;
+}
+.browser-outdate .box .compatibility-layer UL LI.firefox {
+    background: url(http://pc.pic.uhouzz.com/online/cdn/common/images/compatibility-layer/firefox.dfe4cc74.png) no-repeat center 5px;
+}
+.browser-outdate .box .compatibility-layer UL LI {
+    float: left;
+    width: 76px;
+    margin-right: 20px;
+    background-size: 65px 65px;
+}
+LI {
+    list-style: none;
+}
+LI {
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+.browser-outdate .box .compatibility-layer UL LI A {
+    display: block;
+    padding-top: 75px;
+    width: 100%;
+    height: 100%;
+}
+A:link {
+    color: #666;
+}
+A {
+    text-decoration: none;
+}
+A {
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+.browser-outdate .box .compatibility-layer UL LI.chrome {
+    background: url(http://pc.pic.uhouzz.com/online/cdn/common/images/compatibility-layer/chrome.bc2cfde9.png) no-repeat center 5px;
+}
+.browser-outdate .box .compatibility-layer UL LI.ie9 {
+    background: url(http://pc.pic.uhouzz.com/online/cdn/common/images/compatibility-layer/ie9.39d72fc3.png) no-repeat center 5px;
+    margin-right: 0px;
+}

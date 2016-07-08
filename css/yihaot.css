@@ -1,0 +1,1206 @@
+a { color: #ccc;}
+li {list-style: none; padding: 0; margin: 0;}
+a:hover {color: #fff;text-decoration: none; cursor: pointer;}
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    overflow: hidden;
+    background: #f5f5f5;
+    background-image: url(../bg/w13.jpg);
+    background-size: cover;
+}
+
+
+.bg-list {
+    width: 540px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+.bg-list img {
+    width: 100px;
+    height: 55px;
+    margin: 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 180px;
+    height: 50px;
+    float: left;
+    margin-top: 7px;
+}
+.logo img {
+    width: 132px;
+    margin: 5px 20px;
+}
+
+.center {
+    clear: both;
+    min-width: 400px;
+    margin: 70px 0 0 0;
+}
+.online-users {
+    position:fixed;
+    top: 70px;
+    left: 115px;
+    bottom: 10px;
+    width: 16%;
+    color: #fff;
+    z-index: 999; 
+}
+.left-bar {
+    
+    position:fixed;
+    top: 70px;
+    left: 0;
+    bottom: 10px;
+    width: 100px;
+    background: rgba(45,45,50, 0.6);
+    color: #fff;
+    z-index: 999;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.right-bar {
+    width: 21%;
+    min-width: 320px;
+    position: fixed;
+    right: 5px;
+    top: 70px;
+    bottom: 10px;
+    z-index: 999;
+}
+
+.online-users h5 {
+    margin: 0 auto 2px auto;
+    line-height: 26px;
+    height: 35px;
+    background: rgba(45,45,50, 0.6);
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: bolder;
+    width:100%; 
+    display:inline-block;
+}
+.online-users h5.active{
+    background: rgba(45,45,50, 0.8);
+}
+
+.online-users span {margin-top: 5px;}
+
+.online-list {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(45,45,50, 0.6);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+.user-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+.online-list ul {
+    width: 96%;
+    padding: 0; 
+    margin:5px 2%; 
+    overflow:hidden;
+}
+.online-list li {
+    width: 100%;
+    height: 50px;
+    float: left;
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+    position: relative;
+}
+.online-list li:hover {background: rgba(255,255,255,0.3);}
+.online-list li img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 8px 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.online-list li span {
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.online-list li img.level-img {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 50px;
+    height: 15px;
+    overflow:hidden;
+}
+
+
+
+.form-group {overflow: hidden;}
+.left-bar .icon-list, .left-bar .wx-2 {
+    width: 80px;
+    margin:  5px; 
+    float: left;
+}
+.modal-header1 {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e5e5e5;
+    padding:10px 10px 0 0;
+}
+
+.modal-title1 {
+    padding: 11px 20px;
+    height: 30px;
+    line-height: 30px;
+    overflow:hidden;
+    border-bottom: 2px solid #00a0ff; 
+    font-size: 20px;
+    color: #00a0ff;
+}
+
+.alert-box {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.alert-box span {
+    color: red;
+    display: none;
+}
+.alert-box a {float: right;}
+.alert-box a:hover {color: #00a0ff;}
+.alert-border {border:1px solid red;}
+.yzm {
+    width: 60%;
+    float:left;
+    margin-right: 15%;
+}
+.yzm-btn {
+    width: 25%;
+    float: left;
+}
+
+.line {
+    width: 80px;
+    height: 1px;
+    border-bottom: 1px solid rgba(60,60,60, 0.8);
+    border-top: 1px solid rgba(35,35,35,0.8);
+    float: left;
+    margin:5px;
+}
+.icon-list li {
+    width: 80px;
+    height: 90px;
+    margin:10px 0;
+    float: left;
+    text-align: center;
+}
+.icon-list li img {
+    width: 60px;
+}
+.icon-list li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 5px;
+    border: 1px solid rgba(45,45,50, 0);;
+}
+.icon-list li a:hover{
+    background: #232323;
+    border: 1px solid #3c3c3c;
+}
+.icon-list li a span {
+    font-size: 14px;
+    font-family: '微软雅黑';
+    font-weight: 500px;
+    color: #f1f1f1;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-top: 2px;
+    letter-spacing: 1px;
+}
+.wx-2 img{
+    width: 80px;
+    height: 80px;
+    margin:5px auto;
+}
+.wx-2 p {
+    margin:5px 0;
+    width: 80px;
+    padding: 0;
+    text-align: center;
+    line-height: 20px;
+}
+.helper {
+    width: 80px;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 10px;
+}
+.helper li {
+    width: 100%;
+    height: 30px;
+    float: left;
+    text-align: center;
+}
+.helper li a { color: #aaa;}
+.helper li a:hover { color: #00a0ff;}
+
+.center-content {
+    width: 100%; 
+    height: 100%;
+}
+.techer {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    position: relative;
+}
+.techer-cover {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 10px ;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+}
+.techer-cover img {width: 100%;}
+.class-info {
+    float: left;
+    height: 80px;
+    overflow: hidden;
+    margin-top: 15px;
+    
+}
+.class-info h3 {
+    width: 100%;
+    font-size: 24px;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #323232;
+    margin: 0 0 15px 0;
+}
+.techer-name {
+    background: url(../img/techer_icon.png) no-repeat left center;
+    font-size: 16px;
+}
+.techer-name span {
+    padding-left: 16px;
+    line-height: 13px;
+}
+
+.lg-play {
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+}
+.sm-play {
+    width: 640px;
+    height: 360px;
+    position: fixed;
+    top: 10px;
+    right: 360px;
+    z-index: 10;
+}
+#play-box {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    overflow: hidden;
+}
+
+.play-info {
+    width: 100%;
+    height: 50px;
+    background: rgba(255,255,255,0.6);
+    margin: 0;
+    padding:8px 20px;
+    border: 1px solid rgba(235,235,235,0.7);
+    margin-bottom: 20px;
+
+}
+.phone-call, .data-online, .experience {float: right; text-align: center; line-height: 28px; color: #646464; font-size: 14px; margin-top: 1px;}
+.phone-call {
+    padding:0 10px;
+    border-right: 1px solid #A0A0A0;
+    border-left: 1px solid #A0A0A0;
+    font-size: 20px;
+    color:red;
+}
+.qq-list {float: right; margin-right: 12px; line-height: 30px;}
+.qq-list li {
+    float: left;
+    margin:0 5px;
+}
+.phone-call span,.experience span {font-size: 18px; padding-right: 10px; float: left; margin-top: 4px;}
+.data-online {
+    padding-left: 27px;
+    padding-right: 20px;
+    background: url(../img/online_num.png) no-repeat left center;
+}
+.experience {
+    padding-right: 20px;
+}
+
+.news {
+   width: 100%;
+   padding: 10px 20px;
+   background: rgba(255, 255,255, 0.6);
+   border: 1px solid (235, 235,235, 0.6);
+}
+.news h3 {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.news h3 span {
+    float: left;
+    height: 45px;
+    color: #00a0ff;
+    padding: 0 25px;
+    border-bottom: 1px solid #00a0ff;
+}
+
+.news-content {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+.bbs-line {
+    width: 100%;
+    height: 30px;
+    overflow:hidden;
+    position:relative;
+    z-index: 1;
+    background: rgba(45,45,50, 0.6);
+    border-radius: 5px;
+}
+.bbs {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.bbs-line marquee {
+    width: 85%;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #787878;
+}
+
+.bbs-line .glyphicon-volume-up {
+    width:10%;
+    text-align: center;
+    font-size: 16px;
+    color:#00a0ff;
+    padding:0 3%;
+    float: left;
+    line-height: 30px;
+}
+
+.chat {
+    width: 100%;
+    overflow: hidden;
+}
+.chat .chat-box {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    clear: both;
+}
+
+.chat-load {
+    width: 40%;
+    position: absolute;
+    top:30%;
+    left: 30%;
+    overflow: hidden;
+    text-align: center;
+    z-index: 999;
+    color: #fff;
+}
+.chat-load img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.chat .chat-msg {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 5px;
+    background: rgba(45,45,50, 0.6);
+    padding: 5px 0;
+    margin: 10px 0;
+}
+.chat .chat-msg .msg-list {
+    width: 95%;
+    margin: 10px 1% 10px 4%;
+    overflow: hidden;
+}
+.msg-list .msg img, .history-list .msg img {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+.history-hr {
+    float: left;
+    width: 100%;
+    padding: 0 10px 0;
+    margin: 10px 0;
+    line-height: 1px;
+    border-left: 93px solid #ccc;
+    border-right: 93px solid #ccc;
+    text-align: center;
+    color: #fff;
+}
+
+.other-msg, .self-msg {
+    width: 80%;
+    float: left;
+    margin-bottom: 10px;
+}
+.msg-user {
+    width: 99%;
+    float: left;
+    font-size: 12px;
+    margin-left: 5px;
+    overflow: hidden;
+    
+}
+.msg-user p{width:80%;float: left; margin: 0;}
+.msg-user p span {
+    width: 100%;
+    line-height: 18px;
+    float: left;
+}
+.other-msg .msg-user img, .self-msg .msg-user img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    display: block;
+    float: left;
+    border-radius: 5px;
+}
+.self-msg {float: right; margin-right: 5px;}
+.self-msg .msg-user {float: right;}
+.self-msg .msg-user img {float: right; margin-right: 0px; margin-left: 5px;}
+.self-msg p{ float: right; text-align: right;}
+.nickname {color: #00a0ff;}
+.chat-time {color: #aaa;}
+.msg-box {
+    max-width: 100%;
+    float: left;
+    position:relative;
+    background:#fcf8e3;
+    border-radius:5px; /* 圆角 */
+    margin: 10px 0 0 16px;
+    color: #8a6d3b;
+}
+.self-msg .msg-box { background: #d9edf7; color: #31708f;}
+
+.self-msg .msg-box {float: right; margin: 10px 16px 0 0;}
+.msg-arrow {
+    position:absolute;
+    top:-15px;
+    width:0;
+    height:0;
+    font-size:0;
+    border:solid 8px; 
+}
+.other-msg .msg-arrow {
+    left:4px;
+    border-color: rgba(255,255,255,0) rgba(255,255,255,0) #fcf8e3 rgba(255,255,255,0);
+}
+.self-msg .msg-arrow {
+    right: 4px;
+    border-color: rgba(255,255,255,0) rgba(255,255,255,0) #d9edf7 rgba(255,255,255,0);
+}
+
+.msg-list .load {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 10px 0 0 10px;
+    overflow: hidden;
+}
+.self-msg .load { float: right; margin: 10px 10px 0 0;}
+.msg-list .load img {
+    width: 100%;
+    height: 100%;
+}
+
+.msg-box .msg {
+    word-break:break-all;
+    padding: 5px;
+    line-height: 20px;
+    float: left;
+    min-width: 25px;
+}
+
+
+.chat .send-box {
+    width: 100%;
+    height: 155px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(255,255,255, 0.6);
+    border-radius: 5px;
+}
+#send-tip {
+    text-align: center;
+    color: red;
+    width: 100%;
+    height: 18px;
+    margin: 5px 0;
+    line-height: 18px;
+}
+.chat .send-box .send-textarea, .chat .private-send-textarea {
+    margin: 0 0 0 5%;
+    width: 75%;
+    height: 90px;
+    border:1px solid #e6e6e6;
+    border-right: 0px;
+    float: left;
+    background: #fff;
+    overflow-y: auto;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.chat .send-box a {
+    width: 15%;
+    height: 90px;
+    display: block;
+    float: left;
+    margin-top: 0;
+    background: #00a0ff;
+    color: #fff;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    line-height: 90px;
+}
+.chat .send-box .face {
+    width: 100%;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-bottom: 3px;
+}
+.face-list {
+    position: fixed;
+    width: 400px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 10;
+}
+.chat .send-box .face-list li {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    float: left;
+    cursor: pointer;
+}
+
+.chat .history-box {
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 0px;
+    z-index: 9;
+    bottom: 150px;
+    right: 0;
+    background: rgba(255,255,255, 1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.chat .history-box h4 {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    background: rgba(245,245,245,0.6);
+    margin: 0;
+    padding: 0;
+}
+.chat .history-list {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    overflow-y: visible;
+    padding: 5px 0;
+}
+
+.chat span.biaoqing, .chat span.clear-msg, .chat span.history-msg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 21px;
+    cursor: pointer;
+}
+.face span.biaoqing {background:url(../face/icons.png) no-repeat;background-position: 0 -20px;}
+.face span.clear-msg {background:url(../face/icons.png) no-repeat;background-position: -120px -20px;}
+.face span.history-msg {color:#A0A0A0; font-size: 19px; font-weight: lighter;}
+.face span.clear-msg:hover {background:url(../face/icons.png) no-repeat;background-position: -141px -20px;}
+.face span.history-msg:hover {color: #00a0ff;}
+
+#sub-box .modal-body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.modal-dialog .iframe {
+    width: 100%;
+    height: 674px;
+    overflow:hidden;
+    position: relative;
+}
+iframe {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+.crili iframe {height: 750px; top:-80px;}
+.cdata iframe {height: 724px; top:-50px;}
+
+.iframe-hide {
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    bottom: 0px;
+    background: #fff;
+    border-top: 2px solid #006DCC;
+}
+
+.sub-content .deal-list ul,.sub-content .vote-list ul, .share-list ul {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+.deal-list li, .vote-list li, .share-list li {
+    width: 100%;
+    padding:10px 20px;
+    border-bottom: 1px solid #F5F5F5;
+    cursor: pointer;
+    overflow: hidden;
+}
+.share-list li {cursor: auto;}
+.deal-list li h4 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+.vote-list li h4, .share-list li h4 {
+    width: 100%;
+    line-height: 25px;
+    float: left;
+}
+
+.deal-list li span, .vote-list li span {
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+    line-height: 30px;
+}
+.vote-list li .vote-content {
+    width: 80%;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 5px;
+    line-height: 30px;
+    color: #777;
+}
+.deal-list li .deal-content {
+    width: 80%;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 5px;
+    line-height: 30px;
+    color: #777;
+}
+.vote-list a.vote-opt {
+    display: block;
+    float: left;
+    line-height: 20px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin: 5px 10px;
+    color: #333;
+}
+.vote-list a.vote-opt:hover {
+    color: #fff;
+    background: #00A0FF;
+    text-align: center;
+}
+ .share-content {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 5px;
+    line-height: 30px;
+    color: #777;
+ }
+
+.share-content a {
+    float: right;
+    font-size: 14px;
+    color: #00A0FF;
+}
+/*遮挡层*/
+.sk-spinner-cube-grid.sk-spinner {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto; }
+.sk-spinner-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background: #333;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; }
+.sk-spinner-cube-grid .sk-cube:nth-child(1) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; }
+.sk-spinner-cube-grid .sk-cube:nth-child(2) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
+.sk-spinner-cube-grid .sk-cube:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s; }
+.sk-spinner-cube-grid .sk-cube:nth-child(4) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s; }
+.sk-spinner-cube-grid .sk-cube:nth-child(5) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; }
+.sk-spinner-cube-grid .sk-cube:nth-child(6) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
+.sk-spinner-cube-grid .sk-cube:nth-child(7) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s; }
+.sk-spinner-cube-grid .sk-cube:nth-child(8) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s; }
+.sk-spinner-cube-grid .sk-cube:nth-child(9) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1); }
+
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1); } }
+
+@keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1); }
+
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1); } }
+
+.sk-loading {
+    position:fixed;
+    z-index:10001;
+    top:50%;
+    left:50%;
+    display:none;
+}
+.zdc {
+    width:100%;
+    height:10000px;
+    position:absolute;
+    z-index:9999;
+    top:0;
+    background:#FFF;
+    filter:alpha(opacity=20);  
+    -moz-opacity:0.2;  
+    -khtml-opacity: 0.2;  
+    opacity: 0.2;
+    display:none;
+}
+
+.center-btns {
+    height: 50px;
+    margin-top: 5px;
+    padding: 10px 20px;
+    width: 100%;
+}
+.btn-list {height: 30px; margin-left: 180px;}
+
+.btn-list a {
+    width: 100%;
+    height: 30px;
+    display: block;
+    color: #8c8c8c;
+}
+.btn-list a:hover {color: #00a0ff;}
+
+.btn-show {
+    float: right;
+    margin-left: 1%;
+    line-height: 30px;
+    color: #8c8c8c;
+    font-weight: lighter; 
+}
+.btn-show a, .btn-show button {
+    padding: 0;
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+    border: 1px solid #00a0ff; 
+    border-radius: 3px;
+    background: rgb(255,255,255);
+}
+.btn-show span {
+    float: left; 
+    height: 30px;
+    text-align: center;
+}
+.btn-show span.glyphicon {
+    width: 35%;
+    color: #8c8c8c;
+    line-height: 27px;
+    font-size: 18px;
+    color: #00a0ff;
+}
+.btn-show span.save-title{
+    width: 65%;
+    background:url(../img/arrow.png) #00a0ff left center no-repeat;
+    color: #fff;
+    font-weight: bolder;
+}
+.btn-show {width: 80px;height: 30px; position: relative;}
+.teacher-desc, .download-url, .connect-us {width: 110px;}
+.share-url a {border: 1px solid #5cb85c;}
+.share-url span.save-title {background-color: #5cb85c;}
+.share-url span.glyphicon {color: #5cb85c;}
+
+.download-url a {border: 1px solid #337ab7;}
+.download-url span.save-title {background-color: #337ab7;}
+.download-url span.glyphicon {color: #337ab7;}
+
+.teacher-desc a {border: 1px solid #f0ad4e;}
+.teacher-desc span.save-title {background-color: #f0ad4e;}
+.teacher-desc span.glyphicon {color: #f0ad4e;}
+
+.bg-skin a {border: 1px solid #5bc0de;}
+.bg-skin span.save-title {background-color: #5bc0de;}
+.bg-skin span.glyphicon {color: #5bc0de;}
+
+.btn-list .dropdown-menu {
+    min-width: 100px;
+    left: 0px;
+    padding: 5px 10px;
+    z-index:9999999;
+}
+
+.qq-list li a {
+    width: 85px;
+    height: 30px;
+    background: #f5f5f5 url(../img/qq_24px.png) no-repeat left;
+    background-size: 20px;
+    background-position-x: 5px;
+    color: #00A0FF;
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 22px;
+    border: 1px solid #00A0FF;
+}
+
+.share-url .dropdown-menu img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+#new-bill {
+    position: absolute;
+    z-index: 9;
+    width: 90px;
+    right: 40px;
+    bottom: 100px;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+#new-bill:hover {
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+.sub-lide {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 0px;
+    background: #fff;
+    bottom: 50px;
+    border-top:1px solid #00a0ff;
+}
+.bf-form {margin-top: 20px;}
+.bf-form .bf-label {text-align: right;}
+.bf-form li {
+    padding: 5px 10px;
+    float: left;
+    border: 1px solid #CCCCCC;
+    margin:5px 10px 0 0;
+}
+.banner {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: rgba(45,45,50, 0.6);
+}
+.jspDrag {background: #222;}
+
+.connect-qq ,.phone-num{
+    width: 80%;
+    overflow: hidden;
+    margin: 10px auto;
+}
+.connect-qq li {
+    float: left;
+    margin: 5px 10px;
+}
+.phone-num {padding: 0 10px; font-size: 16px; color: red;}
+
+.connect-us {display: none;}
+
+.ad-qq {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+}
+.ad-qq li {
+    float: left;
+    width: 80px;
+    margin:0 10px;
+}
+.download-desc {
+    width: 94%;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.download-desc h3 {
+    color: #00A0FF;
+    font-size: 22px;
+    font-weight: bolder;
+    border-bottom: 1px solid #00A0FF;
+    padding: 0 0 10px;
+}
+.download-desc h4 {
+    color: #333;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.ad-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size:30px; 
+    color:#FFF;
+    border: none;
+    background: none;
+    
+}
+
+.user {
+    float: right;
+    height: 30px;
+    overflow: hidden;
+    margin-left: 15px;
+    border-left: 1px solid #A0A0A0;
+}
+.login-btn {margin-left: 15px;}
+.login-btn button {
+    height: 30px;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.user-img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    float: left;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+    overflow: hidden;
+}
+.user-img img{width: 100%;}
+.user-info {
+    float: left;
+    overflow: hidden;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.user-info-name {
+    color: #00a0ff;
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+}
+.user-info-name span {
+    float: left;
+}
+.user-info-name a {
+    width: 40px;
+    height: 15px;
+    float: right;
+    text-align: right;
+}
+.user-op {height: 15px; overflow: hidden;}
+.user-op a {height: 15px; line-height: 15px;}
+@media screen and (max-width: 1490px) {
+    .icon-list li { height:60px; }
+    .icon-list li img { width: 40px; height: 40px; }
+    .qq-list {display: none;}
+    /*.phone-call {display: none;}*/
+    .connect-us {display: block;}
+}
+@media (min-width:1490px) and (max-width: 1555px) {
+    /*.phone-call {display: none;}*/
+    .connect-us {display: block;}
+}
+@media screen and (max-width: 1180px) {
+    .online-users {display: none; width: 0;}
+}
+
+#whisper-win {
+    width: 700px; 
+    height: 480px; 
+    position:fixed; 
+    top: 50%; left: 50%; 
+    margin-top: -240px; margin-left: -350px; 
+    z-index:9999; 
+    background-color:#fff;
+}
+
+#whisper-win .whisper-header-box {
+    height:30px;
+    background-color:#e9e9e9;
+}
+
+#whisper-win .whisper-header-box span.manager-name {
+    display:inline-block;
+    margin: 3px 10px;
+    color:#333333;
+}
+#whisper-win .whisper-header-box span.manager-x {
+    display:inline-block;
+    margin: 5px 10px;
+    color:#888888;
+    font-size:12px;
+    cursor: pointer;
+    float:right;
+}
+
+#whisper-win .whisper-box {
+    width: 480px;
+    height: 450px;
+    overflow:hidden;
+    float:left;
+}
+
+#whisper-win .whisper-info-box {
+    width:220px;
+    height: 450px;
+    margin-left:480px;
+    overflow:hidden;
+    background-color: #f2f2f2;
+}
+
+#whisper-win .whisper-info-box .launch_qq {
+    display:inline-block;
+    width:79px;
+    height:25px;
+    background:url('../img/qq.jpg') no-repeat;
+    border:0;
+    border-style:none;
+    outline: none;
+}
+
+#whisper-win .whisper-info-box ul{
+    margin: 10px;
+    padding:0; 
+}
+
+.whisper-box .chat .chat-msg {
+    border-radius: 0px;
+    margin: 0px;
+    width:480px;
+    height: 330px;
+    background-color:#d1e2f5;
+}
+
+.whisper-box .send-box {
+    width: 480px;
+    height: 120px;
+    bottom: 0;
+}
+
+.whisper-box .send-box .private-send-textarea {
+    height: 60px;
+}
+.whisper-box .send-box a {
+    height: 60px;
+    line-height: 60px;
+}

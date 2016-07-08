@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta property="qc:admins" content="124406522727610413463757401240141711731441233" />       
+        <link rel="shortcut icon" href="./favicon.ico" />
+        <link rel="bookmark" href="./favicon.ico" />
+        <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" media="screen" />
+        <link type="text/css" href="scroll/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <link rel="stylesheet" href="css/yihaot.css?v=1.0.9" />   
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" href="css/ie.css" />
+            <div class="browser-outdate">
+                <div class="box">
+                    <div class="compatibility-layer">
+                        <h1>浏览器版本过低，为使您获得更好的易号通在线直播体验，建议您使用以下浏览器访问：</h1>
+                        <ul class="clearfix">
+                            <li class="firefox"><a href="http://www.firefox.com.cn/download/">Firefox</a></li>
+                            <li class="chrome"><a href="http://sw.bos.baidu.com/sw-search-sp/software/29cd900ea7d/ChromeStandalone_50.0.2661.102_Setup.exe">Chrome</a></li>
+                            <li class="ie9"><a href="http://www.microsoft.com/en-us/windows/microsoft-edge">IE9及以上</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+            <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+        if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){ 
+            window.location.href="m.html"; 
+        }
+        </script>
+
+        <title>易号财经直播室</title>
+    </head>
+
+    <body>
+        <div class="banner">
+            <div class="logo"></div>        
+            <div class="center-btns">
+                <div class="btn-list">
+                    <div class="user">
+                        <div class="login-btn">
+                            <button type="button" class="btn btn-success" id="to-login">登录</button>
+                            <button type="button" class="btn btn-default" id="to-register">注册</button>
+                        </div>
+                    </div>
+                    <div class="bg-skin btn-show">
+                        <a id="bg-skin">
+                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                            <span class="save-title">换肤</span>
+                        </a>
+                    </div>
+                    <div class="share-url btn-show">
+                        <a href="javascript:;" class="jiathis jiathis_txt">
+                            <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+                            <span class="save-title">分享</span>
+                        </a>
+                        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                    </div>
+                    <!--
+                    <div class="save-url btn-show" >
+                        <a href="javascript:;" onclick="util.add_favorite();">
+                            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
+                            <span class="save-title">收藏</span>
+                        </a>
+                    </div>
+                    -->
+                    <div class="save-url btn-show" >
+                        <a href="易号财经.url">
+                            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
+                            <span class="save-title">保存</span>
+                        </a>
+                    </div>
+                    <div class="download-url btn-show">
+                        <a href="javascript:;" id="download-url">
+                            <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+                            <span class="save-title">软件下载</span>
+                        </a>
+                    </div>
+                    <div class="teacher-desc btn-show">
+                        <a href="javascript:;" id="teacher-btn">
+                            <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                            <span class="save-title">老师介绍</span>
+                        </a>
+                    </div>
+                    <div class="connect-us btn-show">
+                        <a href="javascript:;" id="connect-us">
+                            <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                            <span class="save-title">联系我们</span>
+                        </a>
+                    </div>
+                    <div class="phone-call"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></div>
+                    <div class="qq-list" id="qq"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="left-bar">
+            <div class="icon-list">
+                <li>
+                    <a id="enom" data-name="财经日历"><img src="img/clac.png"><span>财经日历</span></a>
+                </li>
+                <li>
+                    <a id="calendar" data-name="财经数据"><img src="img/data.png"><span>财经数据</span></a>
+                </li>
+                <li>
+                    <a id="bill" data-name="喊单提醒"><img src="img/bill.png"><span>喊单提醒</span></a>
+                </li>
+                <!--
+                <li>
+                    <a id="deal" data-name="交易提示"><img src="img/jiaoyi.png"></a>
+                </li>
+                <li>
+                    <a id="vote" data-name="投票"><img src="img/toupiao.png"></a>
+                </li>
+                <li>
+                    <a id="share" data-name="共享文件"><img src="img/wenjianjia.png"></a>
+                </li>
+                -->
+                <li>
+                    <a id="course" data-name="课程表"><img src="img/kechengbiao.png"><span>课程表</span></a>
+                </li>
+            </div>
+            <div class="line"></div>
+            <div class="wx-2">
+                <img id="wxpub-code">
+                <p>关注易号通微信公众号</p>
+            </div>
+            <div class="line"></div>
+            <div class="wx-2">
+                <img src="img/mobile.png">
+                <p>手机观看<br>扫我！</p>
+            </div>
+            <div class="line"></div>
+            <div class="helper">
+                <li><a target="_blank" href="" id="official-url">易号通官网</a></li>
+            </div>
+        </div>
+
+        <div class="online-users">
+            <!--
+            <div class="user">
+                <div class="login-btn">
+                    <button type="button" class="btn btn-info" id="to-login">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 登录
+                    </button>
+                    <a id="to-register">注册</a>
+                </div>
+            </div>
+            -->
+            <h5 id="badge-member" class="active">会员<span class="badge" style="float: right;">0</span></h5>
+            <h5 id="badge-manager" style="display:none">经纪人<span class="badge" style="float: right;">0</span></h5>
+            <div class="online-list">
+                <div class="user-box">
+                    <ul class="user-list"></ul>
+                </div>
+                <div class="manager-box" style="display:none;">
+                    <ul class="user-list">
+                        <li title="" class="online-li">
+                            <img src="http://i1.dpfile.com/s/img/uc/watermelon120c120.png">
+                            <span class="li-nickname" id="manager-nickname">经纪人昵称</span>
+                            <img src="level/LVM4.png" class="level-img">
+                        </li>
+                        <li>
+                            <span>TEL: <strong id="manager-phone"></strong></span>
+                        </li>
+                        <li>
+                            <span>QQ: <strong id="manager-qq"></strong></span>
+                        </li>
+                        <li>
+                            <span>易号财经直播室欢迎你的到来.</span>
+                        </li>
+                        <li>
+                            <span>如有需要帮助请联系我!</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center-content">
+                <div class="lg-play">
+                    <!--<p style="color: red; font-size: 16px; font-weight: bolder; padding: 5px 10px 0 10px; display: none;">请前往注册，才可观看直播，继续享受专家点评vip待遇</p>-->
+                    <div id="play-box"></div>
+                </div>
+                <div class="play-info">
+                    <div class="experience"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>我的等级：0</div>
+                    <div class="data-online">在线人数：0</div>
+                </div>
+                <div class="news"></div>
+            </div>
+        </div>
+        <div class="right-bar">
+            <div class="bbs-line">
+                <div class="bbs">
+                    <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+                    <div class="bbs-content">
+                        <marquee></marquee>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box">
+                <div class="chat-load">
+                    <img src="img/load.gif">
+                    <p>正在连接聊天室...</p>
+                </div>
+                <div id="chat"  class="chat">
+                    <div class="chat-msg">
+                        <div class="msg-list"></div>
+                    </div>
+                    <div class="send-box">
+                        <p id="send-tip"></p>
+                        <div class="face">
+                            <span class="biaoqing"></span>
+                            <span class="clear-msg"></span>
+                            <span class="glyphicon glyphicon glyphicon-list-alt history-msg" aria-hidden="true" title="历史消息"></span>
+                            <!--<span class="glyphicon glyphicon-off shut-down" aria-hidden="true"></span>-->
+                            <div class="face-list" style="display: none;"></div>
+                            <div class="history-box">
+                                <h4>消息记录</h4>
+                                <div class="history-list"></div>
+                            </div>
+                        </div>
+                        <div class="send-textarea" contenteditable="true"></div>
+                        <a id="send">Enter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="sub-box">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <span class="modal-title"></span>
+                    </div>
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header1">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <span class="modal-title1"></span>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <span style="float: left; margin: 5px 0 0 5%;" id="qq_login_btn"></span>
+                        <button type="button" class="btn btn-error" data-dismiss="modal" id="cancel-btn">取消</button>
+                        <button type="button" class="btn btn-primary" id="modal-btn">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="qq-content" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" style="width: 500px;">
+                <div class="modal-content">
+                    <div class="modal-header1">
+                        <span class="modal-title1">个人资料完善</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert-box" style="margin:10px auto; width: 350px;">
+                            <div class="form-group">
+                                <label>我的昵称:</label>
+                                <input type="text" class="form-control"  id="qu-nick">
+                            </div>
+                            <div class="form-group">
+                                <label>我的QQ号:</label>
+                                <input type="text" class="form-control" id="qu-qq">
+                            </div>
+                            <div class="form-group">
+                                <label>我的手机:</label>
+                                <input type="text" class="form-control" id="qu-phone">
+                            </div>
+                            <div class="form-group">
+                                    <input type="text" class="form-control yzm" id="qu-yzm" placeholder="填入手机收到的短信验证码">
+                                    <button type="button" class="btn btn-info yzm-btn"  onclick="yihaoT.get_yzm('qu-phone')">获取验证</button>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="qq-cont-btn" style="margin-right: 45px;">确定提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" id="tip">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">提示</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="advert">
+            <div class="modal-dialog" style="width: 700px;">
+                    <div class="modal-body" style="position: relative;"></div>
+            </div>
+        </div>
+        
+        <div class="zdc"></div>
+        <div class="sk-spinner sk-spinner-cube-grid sk-loading">
+            <div class="sk-cube"></div>
+            <div class="sk-cube"></div>
+            <div class="sk-cube"></div>
+            <div class="sk-cube"></div>
+            <div class="sk-cube"></div>
+            <div class="sk-cube"></div>
+            <div class="sk-cube"></div>
+            <div class="sk-cube"></div>
+            <div class="sk-cube"></div>
+        </div>
+        <div id="login-form" style="display: none;">
+            <div class="alert-box">
+                <form>
+                    <div class="form-group"></div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="loginuser" placeholder="帐号 手机号码/QQ/邮箱">
+                        <span>请输入正确的帐号</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="loginpwd" placeholder="********">
+                        <span>请输入正确的密码</span>
+                    </div>
+                    <div class="form-group"><a href="#" onclick="yihaoT.gen_register();">前往注册</a></div>
+                </form>
+            </div>
+        </div>
+        <div id="change-user" style="display: none;">
+            <div class="alert-box">
+                <form>
+                    <div class="form-group">
+                        <div class="col-xs-2" style="text-align: right;">用户名:</div>
+                        <div class="col-xs-9"><input type="text" class="form-control"  id="cu-username"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2" style="text-align: right;">昵称:</div>
+                        <div class="col-xs-9"><input type="text" class="form-control"  id="cu-nick"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2" style="text-align: right;">Q Q:</div>
+                        <div class="col-xs-9"><input type="text" class="form-control" id="cu-qq"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-11" style="text-align: right;">
+                            <button type="button" class="btn btn-success" id="change-base">修改基本信息</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-xs-2" style="text-align: right;">手机:</div>
+                        <div class="col-xs-9"><input type="text" class="form-control" id="cu-phone"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2"></div>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control yzm" id="cu-yzm" placeholder="填入手机收到的短信验证码">
+                            <button type="button" class="btn btn-info yzm-btn"  onclick="yihaoT.get_yzm('cu-phone')">获取验证</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-11" style="text-align: right;">
+                            <button type="button" class="btn btn-primary" id="change-phone">修改手机号</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-xs-2" style="text-align: right;">新密码:</div>
+                        <div class="col-xs-9"><input type="password" class="form-control" id="cu-pwd"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2" style="text-align: right;">再确认:</div>
+                        <div class="col-xs-9"><input type="password" class="form-control" id="cu-pwd2" placeholder="再次确认新密码"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-11" style="text-align: right;">
+                            <button type="button" class="btn btn-danger" id="change-pwd">修改密码</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div id="register-form" style="display: none;">
+            <div class="alert-box">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" placeholder="帐号 手机号码/QQ/邮箱">
+                        <span>请输入正确的帐号</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="register-qq" placeholder="QQ">
+                        <span>请输入正确的QQ号</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nickname" placeholder="昵称">
+                        <span>请输入正确的昵称</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd" placeholder="密码">
+                        <span>请输入正确的密码</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd2" placeholder="再次确认密码">
+                        <span>两次输入的密码需保持一致</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="telephone" placeholder="手机号码">
+                        <span>请输入正确的手机号码</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control yzm" id="yzm" placeholder="填入手机收到的短信验证码">
+                        <button type="button" class="btn btn-info yzm-btn" onclick="yihaoT.get_yzm('telephone')">获取验证码</button>
+                    </div>
+                    <div class="form-group"><a href="#" onclick="yihaoT.gen_login();">前往登录</a></div>
+                </form>
+            </div>
+        </div>
+        <div id="bill-table" style="display: none;">
+            <div class="bill-table">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="th-sortable" data-toggle="class">商品</th>
+                            <th>单号</th>
+                            <th>开仓时间</th>
+                            <th>类型</th>
+                            <th>仓位</th>
+                            <th>开仓价</th>
+                            <th>止损价</th>
+                            <th>止盈价</th>
+                            <th>平仓时间</th>
+                            <th>平仓价</th>
+                            <th>获利点数</th>
+                            <th>分析师</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="course-table" style="display: none;">
+            <div class="bill-table">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>上课时间</th>
+                            <th>星期一</th>
+                            <th>星期二</th>
+                            <th>星期三</th>
+                            <th>星期四</th>
+                            <th>星期五</th>
+                            <th>星期六</th>
+                            <th>星期日</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="carousel-example" style="display: none;">
+            <ol class="carousel-indicators"></ol>
+            <div class="carousel-inner" role="listbox"></div>
+            <a class="left carousel-control" href="#carousel-teachers" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-teachers" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="connect-style" style="display: none;">
+            <div class="connect-qq">
+            </div>
+            <div class="phone-num">
+                <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 
+            </div>
+        </div>
+        <div id="download-desc" style="display: none;">
+            <div class="download-desc">
+                <table>
+                    <tr>
+                        <td style="width:50%;">
+                            <h3>P C 端</h3>
+                            <h4>1、大连再生资源行情分析系统V3.0</h4>
+                            <div class="form-group">
+                                <a class="btn btn-info" href="http://www.yhtvideo.com/download/hqfx.exe" role="button">windows立即下载</a>
+                                <a class="btn btn-success" href="http://www.yhtvideo.com/download/hqsms.pdf" role="button">使用手册下载</a>
+                            </div>
+                            <h4>2、大连再生资源交易所现货挂牌交易系统V3.0</h4>
+                            <div class="form-group">
+                                <a class="btn btn-info" href="http://www.yhtvideo.com/download/jyxt-for-windows-xp.exe" role="button">windows XP 立即下载</a>
+                                <a class="btn btn-warning" href="http://www.yhtvideo.com/download/jyxt-for-windows7.exe" role="button">windows 7/8 下载</a>
+                                <a class="btn btn-success" href="http://www.yhtvideo.com/download/jysms.pdf" role="button">使用手册下载</a>
+                            </div>
+                            <h4>3、大连再生资源交易所模拟交易系统V3.0</h4>
+                            <div class="form-group">
+                                <a class="btn btn-info" href="http://www.yhtvideo.com/download/mnxt-for-windows-xp.exe" role="button">windows XP 立即下载</a>
+                                <a class="btn btn-warning" href="http://www.yhtvideo.com/download/mnxt-for-windows7.exe" role="button">windows 7/8 下载</a>
+                                <a class="btn btn-success" href="http://www.yhtvideo.com/download/jysms.pdf" role="button">使用手册下载</a>
+                            </div>
+                        </td>
+                        <td style="width:5%;"></td>
+                        <td style="width:45%;">
+                            <h3>移动端</h3>
+                            <div class="app-left" style="width: 70%; float: left;">
+                                <h4>1、大连再生资源交易所现货挂牌交易系统手机版</h4>
+                                <div class="form-group">
+                                    <a class="btn btn-info" href="http://www.yhtvideo.com/download/jys_android_1.apk" role="button">安卓手机端APK</a>
+                                </div>
+                                <h4 style="margin-top: 35px;">2、新版安卓手机APPv2.0</h4>
+                                <div class="form-group">
+                                    <a class="btn btn-warning" href="http://www.yhtvideo.com/download/jys_android.apk " role="button">安卓手机端APK</a>
+                                </div>
+                                <br/><br/>
+                            </div>
+                            <div class="app-code" style="width: 25%; float: left;">
+                                <img src="img/apk1.png" style="width: 70%;  margin-top: 10px;">
+                                <img src="img/apk2.png" style="width: 70%;  margin-top: 10px;">
+                            </div>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="whisper-win" style="display:none;">
+            <div class="whisper-header-box">
+                <span class="manager-name" id="manager-nickname">经纪人 - 经纪人昵称</span>
+                <span class="manager-x">最小化</span>
+            </div>
+            <div class="whisper-box">
+                <div class="chat-load">
+                    <img src="img/load.gif">
+                    <p>正在连接聊天室...</p>
+                </div>
+                <div id="private-chat" class="chat">
+                    <div class="chat-msg">
+                        <div class="private-msg-list"></div>
+                    </div>
+                    <div class="send-box">
+                        <p id="send-tip"></p>
+                        <div class="face">
+                            <span class="biaoqing"></span>
+                            <span class="clear-msg"></span>
+                            <div class="face-list" style="display: none;"></div>
+                        </div>
+                        <div class="private-send-textarea" contenteditable="true"></div>
+                        <a id="private-send">Enter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="whisper-info-box">
+                <ul>
+                    <li>
+                        <span><a href="javascript:;" target="_blank" id="whisper_launch_qq" class="launch_qq"></a></span>
+                    </li>
+                    <li>
+                        <span>TEL: <strong id="manager-phone"></strong></span>
+                    </li>
+                    <li>
+                        <span>QQ: <strong id="manager-qq"></strong></span>
+                    </li>
+                    <li>
+                        <span>易号财经直播室欢迎你的到来.</span>
+                    </li>
+                    <li>
+                        <span>如有需要帮助请联系我!</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="display:none">
+            <a id="load-qq"><span id="staff">弹窗客服<span></a>
+            <script src="https://s4.cnzz.com/z_stat.php?id=1259791811&web_id=1259791811" language="JavaScript"></script>
+        </div>
+    </body>
+    <!--<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>-->
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101321311" data-redirecturi="http://zhibo.yht134.com/qq_login.html" charset="utf-8"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jQuery.dragmove.js"></script>
+    <script type="text/javascript" src="js/swfobject.js"></script>
+    <script type="text/javascript" src="js/web_socket.js"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
+    <script type="text/javascript" src="js/js.cookie-2.1.2.min.js"></script>
+    <script type="text/javascript" src="scroll/script/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="scroll/script/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="js/chat.js?v=1.0.6"></script>
+    <script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+    <!--<script type="text/javascript" src="jwplayer/provider.streamroot.js"></script>-->
+    <script type="text/javascript" src="js/yihaotong.js?v=1.1.4"></script>
+    <script>$('.jiathis_style').eq(0).remove();</script>
+    <script>
+    $(function() {  
+        $('#whisper-win').dragmove();
+    });
+    </script>
+</html>
